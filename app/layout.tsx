@@ -4,6 +4,8 @@ import { Inter as FontSans } from "next/font/google"
 import './globals.css'
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Analytics } from '@/components/analytics'
+import { TailwindIndicator } from '@/components/tailwind-indicator'
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -32,7 +34,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           disableTransitionOnChange
         >
           {children}
+          <TailwindIndicator />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
