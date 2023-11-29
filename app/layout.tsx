@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from '@/components/analytics'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { SiteHeader } from '@/components/site-header'
+import { SiteFooter } from '@/components/site-footer'
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="flex-1">
             {children}
           </div>
+          <SiteFooter />
           <TailwindIndicator />
         </ThemeProvider>
         <Analytics />
