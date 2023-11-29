@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from '@/components/analytics'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
+import { SiteHeader } from '@/components/site-header'
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem
           disableTransitionOnChange
         >
+          <SiteHeader />
           {children}
           <TailwindIndicator />
         </ThemeProvider>
