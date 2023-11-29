@@ -35,7 +35,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           disableTransitionOnChange
         >
           <SiteHeader />
-          {children}
+          <div className="flex-1">
+            {children}
+          </div>
           <TailwindIndicator />
         </ThemeProvider>
         <Analytics />
